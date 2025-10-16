@@ -12,7 +12,7 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 console.log("EXERCISE 2:\n==========\n");
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
         console.log(`${i} FIZZBUZZ`);
     } else if (i % 5 == 0)  {
@@ -28,7 +28,7 @@ for (i = 1; i <= 100; i++) {
 console.log("EXERCISE 3:\n==========\n");
 console.log("Odd number While");
 
-i = 1;
+let i = 1;
 while (i <= 100) {
     if (i % 2 == 1) {
         console.log(i);
@@ -79,12 +79,15 @@ console.log("EXERCISE 3:\n==========\n");
 let value = Math.round((Math.random() * 500)); // creates a random number between 0 and 500
 let n = Math.round(Math.random() * (500 - 100) + 100); // creates a random number between 100 and 500
 
-for (i = 1; i <= n; i++) {
-    if (i == n) {
+let found = false;
+
+for (let i = 1; i <= n; i++) {
+    if (i === value) {
         console.log(`Found ${value}!`);
+        found = true;
         break;
     } 
-    if (i == n) {
+    if (!found) {
     console.log(`Did not find ${value} within 1-${n}`);
     }
 }
@@ -99,7 +102,7 @@ let start = Math.round(Math.random() * (10 - 1) + 1);
 
 console.log("range from " + start + "-" + end + " FIZZ Divisor " + fizzDivisor + " BUZZ Divisor " + buzzDivisor);
 
-for (i = start; i <= end; i++) {
+for (let i = start; i <= end; i++) {
 
     if (i % fizzDivisor == 0 && i % buzzDivisor == 0) {
         console.log(`${i} FIZZBUZZ`);
@@ -107,8 +110,6 @@ for (i = start; i <= end; i++) {
         console.log(`${i} BUZZ`);
     } else if (i % fizzDivisor == 0) {
         console.log(`${i} FIZZ`);
-    } else {
-        continue
     }
 
 }
