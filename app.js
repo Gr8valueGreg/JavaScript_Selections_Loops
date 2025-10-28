@@ -87,10 +87,11 @@ for (let i = 1; i <= n; i++) {
         found = true;
         break;
     } 
+}
     if (!found) {
     console.log(`Did not find ${value} within 1-${n}`);
     }
-}
+
 
 
 console.log("EXERCISE 4:\n==========\n");
